@@ -13,10 +13,10 @@ app.use(express.json());
 // })
 
 app.delete('/koin/:id', (req, res) => {
-    if (req.params.id === '1') {
-        return res.status(204).json({ message: 'Delete Success' })
-    } else {
+    if (req.params.id === '2') {
         return res.status(404).json({ message: 'パラメータが不正です。[削除するファイルが 存在しません。]' })
+    } else {
+        return res.status(204).json({ message: 'Delete Success' })
     }
 })
 app.post('/koin', (req, res) => {
