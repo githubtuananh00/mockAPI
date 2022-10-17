@@ -8,17 +8,17 @@ app.use(express.json());
 
 
 
-app.delete('/koin/:id', (req, res) => {
-    return res.status(204).json({ message: 'Delete Success' })
-})
-
 // app.delete('/koin/:id', (req, res) => {
-//     if (req.params.id === '1') {
-//         return res.status(204).json({ message: 'Delete Success' })
-//     } else {
-//         return res.status(404).json({ message: 'パラメータが不正です。[削除するファイルが 存在しません。]' })
-//     }
+//     return res.status(204).json({ message: 'Delete Success' })
 // })
+
+app.delete('/koin/:id', (req, res) => {
+    if (req.params.id === '1') {
+        return res.status(204).json({ message: 'Delete Success' })
+    } else {
+        return res.status(404).json({ message: 'パラメータが不正です。[削除するファイルが 存在しません。]' })
+    }
+})
 app.post('/koin', (req, res) => {
     console.log(req.body);
     req.body.gyomuShosaiCd = null;
