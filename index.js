@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.delete('/koin/:id', (req, res) => {
     res.header('Location', '/api/v1/files/123456789')
-    if (req.params.id === '123456789012345678901' && req.params.id === "1" && req.params.id === "2") {
+    if (req.params.id === '123456789012345678901' || req.params.id === "1" || req.params.id === "2") {
         return res.status(204).json({ message: 'Delete Success' })
     } else {
         return res.status(404).json({ message: 'パラメータが不正です。[削除するファイルが 存在しません。]' })
