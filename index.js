@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.delete('/koin/:id', (req, res) => {
     res.header('Location', '/api/v1/files/123456789')
-    return res.status(204).json({ message: 'Delete Success' })
+    return res.status(200).json({ message: 'Delete Success' })
 })
 
 // app.delete('/koin/:id', (req, res) => {
