@@ -13,6 +13,7 @@ app.use(express.json());
 // })
 
 app.delete('/koin/:id', (req, res) => {
+    res.header('Location', '/api/v1/files/123456789')
     if (req.params.id === '1') {
         return res.status(204).json({ message: 'Delete Success' })
     } else {
