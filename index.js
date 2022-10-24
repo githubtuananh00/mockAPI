@@ -21,7 +21,7 @@ app.delete('/koin/:id', (req, res) => {
     }
 })
 app.post('/koin', (req, res) => {
-    req.body.gyomuShosaiCd = null;
+    // req.body.gyomuShosaiCd = null;
     if (req.body.gyomuShosaiCd === null) {
         res.header('Location', '/api/v1/files/123456789')
         return res.status(400).json({ message: 'パラメータが不正です。[業務詳細コード]' })
